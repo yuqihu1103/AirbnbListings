@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
                           listing1.host_thumbnail_url
                         } alt="Host Thumbnail">
                         <p class="card-text">${listing1.description}</p>
-                        <p class="card-text">Amenities:${listing1.amenities.join(
-                          ", "
-                        )}</p>
+                        <p class="card-text">Amenities:${JSON.parse(
+                          listing1.amenities
+                        ).join(", ")}</p>
                     </div>
                 </div>
             </div>
@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
                           listing2.host_thumbnail_url
                         } alt="Host Thumbnail">
                         <p class="card-text">${listing2.description}</p>
-                        <p class="card-text">Amenities:${listing2.amenities.join(
-                          ", "
-                        )}</p>
+                        <p class="card-text">Amenities:${JSON.parse(
+                            listing2.amenities
+                        ).join(", ")}</p>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
           return Math.floor(Math.random() * (max - min + 1)) + min;
         }
         let randomListingIndex = getRandomInt(0, 499);
-        
+
         let randomListing = listings[randomListingIndex];
 
         supriseListing.innerHTML = `
@@ -64,15 +64,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p class="card-text">${randomListing.price}</p>
                     <p class="card-text">Host: ${randomListing.host_name}</p>
                     <img src=${
-                        randomListing.host_thumbnail_url
+                      randomListing.host_thumbnail_url
                     } alt="Host Thumbnail">
                     <p class="card-text">${randomListing.description}</p>
-                    <p class="card-text">Amenities:${randomListing.amenities.join(
-                        ", "
-                    )}</p>
+                    <p class="card-text">Amenities:${JSON.parse(
+                        randomListing.amenities
+                    ).join(", ")}</p>
                 </div>
             </div>
-        `
+        `;
       });
     })
     .catch((error) => {
