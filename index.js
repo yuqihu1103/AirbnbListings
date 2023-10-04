@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         let randomListingIndex = getRandomInt(0, 499);
 
-        let randomListing = listings[randomListingIndex];
+        let randomListing = data[randomListingIndex];
 
         supriseListing.innerHTML = `
             <div class="card" style="width: 50%;">
