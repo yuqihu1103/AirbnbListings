@@ -24,17 +24,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">${listing2.name}</h5>
-                        <p class="card-text">Description</p>
-                        <p class="card-text">Ameneties</p>
-                        <p class="card-text">host</p>
-                        <p class="card-text">price</p>
-                        <p class="card-text">thumbnail</p>
+                        <p class="card-text">${listing2.description}</p>
+                        <p class="card-text">${listing2.amenities}</p>
+                        <p class="card-text">${listing2.host_name}</p>
+                        <p class="card-text">${listing2.price}</p>
+                        <img src=${listing2.host_thumbnail_url} alt="Host Thumbnail">
                     </div>
                 </div>
             </div>
         </div>
         `;
       }
+
+      let supriseButton = document.getElementById("suprise");
+      supriseButton.addEventListener("click", function () {
+        console.log("clicked")
+      });
     })
     .catch((error) => {
       console.error("Error:", error);
