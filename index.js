@@ -12,11 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">${listing1.name}</h5>
-                        <p class="card-text">${listing1.description}</p>
-                        <p class="card-text">${listing1.amenities}</p>
-                        <p class="card-text">${listing1.host_name}</p>
                         <p class="card-text">${listing1.price}</p>
+                        <p class="card-text">Host: ${listing1.host_name}</p>
                         <img src=${listing1.host_thumbnail_url} alt="Host Thumbnail">
+                        <p class="card-text">${listing1.description}</p>
+                        <p class="card-text">Amenities:${listing1.amenities.join(", ")}</p>
                     </div>
                 </div>
             </div>
@@ -24,11 +24,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">${listing2.name}</h5>
-                        <p class="card-text">${listing2.description}</p>
-                        <p class="card-text">${listing2.amenities}</p>
-                        <p class="card-text">${listing2.host_name}</p>
                         <p class="card-text">${listing2.price}</p>
+                        <p class="card-text">Host: ${listing2.host_name}</p>
                         <img src=${listing2.host_thumbnail_url} alt="Host Thumbnail">
+                        <p class="card-text">${listing2.description}</p>
+                        <p class="card-text">Amenities:${listing2.amenities.join(", ")}</p>
                     </div>
                 </div>
             </div>
