@@ -61,13 +61,13 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="card" style="width: 50%;">
                 <div class="card-body">
                     <h5 class="card-title">${randomListing.name}</h5>
-                    <p class="card-text">${randomListing.price}</p>
+                    <p class="card-text">Price: ${randomListing.price}</p>
                     <p class="card-text">Host: ${randomListing.host_name}</p>
                     <img src=${
                       randomListing.host_thumbnail_url
                     } alt="Host Thumbnail">
                     <p class="card-text">${randomListing.description}</p>
-                    <p class="card-text">Amenities:${JSON.parse(
+                    <p class="card-text">Amenities: ${JSON.parse(
                         randomListing.amenities
                     ).join(", ")}</p>
                 </div>
